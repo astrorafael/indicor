@@ -1,0 +1,82 @@
+<relationships>
+
+  <observer name='AUDINE1'>
+
+    <!-- AUDINE1 observes scope to track properties and update FITS header -->
+
+    <observable name='LX200'>
+      <property topic='value'>TARGET</property>
+      <property topic='value'>EQUATORIAL_COORD</property>
+      <property topic='value'>FITS_TEXT_DATA</property>
+      <property topic='value'>OPTICS</property>
+      <property topic='value'>MOUNT</property>
+    </observable>
+
+  <!--  AUDINE1 observe COR to include data in the FITS header -->
+  <!--  and to sync with COR connection state -->
+
+    <observable name='COR'>
+      <property topic='value'>CCD_TEMP</property>
+      <property topic='value'>FIRMWARE</property>
+      <property topic='state'>HUB</property>
+    </observable>
+
+  </observer>
+
+  <observer name='AUDINE2'>
+
+    <!-- AUDINE2 observes the same scope to track properties and update FITS header -->
+
+    <observable name='LX200'>
+      <property topic='value'>TARGET</property>
+      <property topic='value'>EQUATORIAL_COORD</property>
+      <property topic='value'>FITS_TEXT_DATA</property>
+      <property topic='value'>OPTICS</property>
+      <property topic='value'>MOUNT</property>
+    </observable>
+
+  <!--  AUDINE2 observe COR to include data in the FITS header -->
+  <!--  and to sync with COR connection state -->
+  <!--  Temperature data are not observed -->
+
+    <observable name='COR'>
+      <property topic='value'>FIRMWARE</property>
+      <property topic='state'>HUB</property>
+    </observable>
+
+  </observer>
+
+  <!-- Telescopes observes COR to sync to global connection state -->
+  <!-- since it uses a serial link over the COR -->
+
+  <observer name='LX200'>
+    <observable name='COR'>
+      <property topic='state'>HUB</property>
+    </observable>
+  </observer>
+
+  <!--  COR Power object observes COR to sync to global connection state -->
+  <!-- since it is a COR virtual device -->
+
+  <observer name='CORPOWER'>
+    <observable name='COR'>
+      <property topic='state'>HUB</property>
+    </observable>
+  </observer>
+
+  <!-- COR observes both  CCDs to disable polling during the readout -->
+
+  <observer name='COR'>
+
+    <observable name='AUDINE1'>
+      <property topic='value'>CCD_STATUS</property>
+    </observable>
+
+    <observable name='AUDINE2'>
+      <property topic='value'>CCD_STATUS</property>
+    </observable>
+
+  </observer>
+
+
+</relationships>

@@ -1,0 +1,102 @@
+
+<!--  Device 1DRIVER  -->
+
+<defDevice name='1DRIVER'>
+
+<!--  Device 1DRIVER, Property CCD1  -->
+
+  <defTextVector device='1DRIVER' name='CCD1' state='Idle' label='Camara CCD 1' perm='ro'>
+    <defText name='CONFIG' label='Fichero de configuracion'>
+			@pkgdatadir@/audine1.xml
+    </defText>
+    <defText name='MODULE' label='Plug-In'>
+       	@libdir@/audine.so
+    </defText>
+    <defText name='PARAMS' label='Parametros de inicializacion'>
+       PERI_CCD1
+    </defText>
+  </defTextVector>
+
+<!--  Device 1DRIVER, Property CCD2  -->
+
+  <defTextVector device='1DRIVER' name='CCD2' state='Idle' label='Camara CCD 2' perm='ro'>
+    <defText name='CONFIG' label='Fichero de configuracion'>
+			@pkgdatadir@/audine2.xml
+    </defText>
+    <defText name='MODULE' label='Plug-In'>
+       	@libdir@/audine.so
+    </defText>
+    <defText name='PARAMS' label='Parametros de inicializacion'>
+      PERI_CCD2
+    </defText>
+  </defTextVector>
+
+<!--  Device 1DRIVER, Property COR  -->
+
+  <defTextVector device='1DRIVER' name='COR' state='Idle' label='COR y Potencia' perm='ro'>
+    <defText name='CONFIG' label='Fichero de configuracion'>
+			@pkgdatadir@/cor.xml
+    </defText>
+    <defText name='MODULE' label='Plug-In'>
+       	@libdir@/cor.so
+    </defText>
+    <defText name='PARAMS' label='Parametros de inicializacion'>
+    </defText>
+  </defTextVector>
+
+<!--  Device 1DRIVER, Property TELESCOP  -->
+
+  <defTextVector device='1DRIVER' name='TELESCOP2' state='Idle' label='Telescopio' perm='ro'>
+    <defText name='CONFIG' label='Fichero de configuracion'>
+			@pkgdatadir@/trackscope.xml
+    </defText>
+    <defText name='MODULE' label='Plug-In'>
+       	@libdir@/trackscope.so
+    </defText>
+    <defText name='PARAMS' label='Parametros de inicializacion'>
+    </defText>
+  </defTextVector>
+
+<!--  Device 1DRIVER, Property TELESCOP  -->
+
+  <defTextVector device='1DRIVER' name='TELESCOP' state='Idle' label='Telescopio' perm='ro'>
+    <defText name='CONFIG' label='Fichero de configuracion'>
+			@pkgdatadir@/lx200simple.xml
+    </defText>
+    <defText name='MODULE' label='Plug-In'>
+       	@libdir@/lx200.so
+    </defText>
+    <defText name='PARAMS' label='Parametros de inicializacion'>
+     PERI_SER_B
+    </defText>
+  </defTextVector>
+
+<!--  Device 1DRIVER, Property METEO  -->
+
+  <defTextVector device='1DRIVER' name='METEO' state='Idle' label='Estacion Meteorologica' perm='ro'>
+    <defText name='CONFIG' label='Fichero de configuracion'>
+			@pkgdatadir@/meteo.xml
+    </defText>
+    <defText name='MODULE' label='Plug-In'>
+      NULL
+    </defText>
+    <defText name='PARAMS' label='Parametros de inicializacion'>
+     PERI_SER_D
+    </defText>
+  </defTextVector>
+
+<!--  Device 1DRIVER, Property POTENCIA  -->
+
+  <defTextVector device='1DRIVER' name='POTENCIA' state='Idle' label='Control de Potencia' perm='ro'>
+    <defText name='CONFIG' label='Fichero de configuracion'>
+			@pkgdatadir@/corpower.xml
+    </defText>
+    <defText name='MODULE' label='Plug-In'>
+                        @libdir@/corpower.so
+    </defText>
+    <defText name='PARAMS' label='Parametros de inicializacion'>
+
+    </defText>
+  </defTextVector>
+
+</defDevice>

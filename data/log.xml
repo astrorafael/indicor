@@ -1,0 +1,91 @@
+<!-- This XML configuration file describes the log level for each class
+  in the INDI libray and plug-ins
+
+  Available Levels: NONE, ERROR, WARN, INFO, DEBUG, VERBOSE
+
+  Class names must be exactly the ones used in the source code
+  Classes not listed here will have a log level NONE
+-->
+
+<log path="@pkgdatadir@/pacorro.log">
+
+  <!-- The INDI Library leaf classes -->
+
+  <class name="Driver" value="INFO" />
+  <class name="RelationshipsReader"  value="INFO" />
+  <class name="DeviceReader"         value="INFO" />
+  <class name="DeviceManager"        value="INFO" />
+  <class name="Device"               value="INFO" />
+  <class name="TextProperty"         value="INFO" />
+  <class name="NumberProperty"       value="INFO" />
+  <class name="SwitchProperty"       value="INFO" />
+  <class name="LightProperty"        value="INFO" />
+  <class name="BLOBProperty"         value="INFO" />
+  <class name="TextPropertyVector"   value="INFO" />
+  <class name="NumberPropertyVector" value="INFO" />
+  <class name="SwitchPropertyVector" value="INFO" />
+  <class name="LightPropertyVector"  value="INFO" />
+  <class name="BLOBPropertyVector"   value="INFO" />
+  <class name="TextVectorHandler"    value="INFO" />
+  <class name="NumberVectorHandler"  value="INFO" />
+  <class name="SwitchVectorHandler"  value="INFO" />
+  <class name="LightVectorHandler"   value="INFO" />
+  <class name="BLOBVectorHandler"    value="INFO" />
+  <class name="INDIHandler"          value="INFO" />
+  <class name="CORQueue"             value="INFO" />
+  <class name="PipeEventSource"      value="INFO" />
+  <class name="UDPDemux"             value="INFO" />
+  <class name="UDPMux"               value="INFO" />
+  <class name="AdaptiveTimer"        value="INFO" />
+  <class name="AlarmImp"             value="INFO" />
+
+  <!-- The LX200 Simple plugin classes -->
+
+  <class name="LX200Simple"       value="INFO" />
+  <class name="RawCommand"        value="INFO" />
+  <class name="GetRA"             value="INFO" />
+  <class name="GetDEC"            value="INFO" />
+  <class name="SetTargetRA"       value="INFO" />
+  <class name="SetTargetDEC"      value="INFO" />
+  <class name="SyncTelescope"     value="INFO" />
+  <class name="SlewToTarget"      value="INFO" />
+  <class name="MacroGetRaDec"     value="INFO" />
+  <class name="MacroSyncRaDec"    value="INFO" />
+  <class name="MacroSlewToTarget" value="INFO" />
+  <class name="Abort"             value="INFO" />
+  <class name="SlewComplete"      value="INFO" />
+  <class name="ProductName"       value="INFO" />
+  <class name="FirmwareNumber"    value="INFO" />
+  <class name="FirmwareDate"      value="INFO" />
+  <class name="FirmwareTime"      value="INFO" />
+  <class name="GetTargetRA"       value="INFO" />
+  <class name="TogglePrecision"   value="INFO" />
+
+  <!-- The COR   plugin classes -->
+  <class name="COR"         value="INFO" />
+  <class name="CORIdle"     value="INFO" />
+  <class name="COROk"       value="INFO" />
+  <class name="CORBusy"     value="INFO" />
+  <class name="CORAlert"    value="INFO" />
+
+  <!-- The Audine plugin classes -->
+  <class name="Audine"         value="INFO" />
+  <class name="CCDChip"        value="INFO" />
+  <class name="ImageSequencer" value="INFO" />
+  <class name="Storage"        value="INFO" />
+  <class name="AudineIdle"     value="INFO" />
+  <class name="AudineOk"       value="INFO" />
+  <class name="AudineWait"     value="INFO" />
+  <class name="AudineExp"      value="INFO" />
+  <class name="AudineRead"     value="INFO" />
+  <class name="AudineAlert"    value="INFO" />
+
+  <!-- The TrackScope plugin classes -->
+  <class name="TrackScope"     value="INFO" />
+
+  <!-- The COR Power plugin classes -->
+  <class name="CORPower"       value="INFO" />
+  <class name="SetPower"       value="INFO" />
+  <class name="PowerStatus"    value="INFO" />
+
+</log>

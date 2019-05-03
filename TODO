@@ -1,0 +1,11 @@
+INDI
+====
+
+* Startup script pacorro.sh?
+* Include icon image for installing in GNOME
+* BLOB Handling. Review code, add lzo compression and base64 encoding.
+* Installation doc
+* design doc in texifno format
+* Juntar el mux y el demux en un mismo objeto ¿ que implemente dos interfaces ?
+
+
